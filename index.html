@@ -4,9 +4,27 @@
 	<title>TechTrek Product Matching</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  	<!--Load React Components -->
+  	
 </head>
 <body>
-	<div id="root"></div>
+	<div id="root">
+		<h1>LOGIN PAGE</h1>
+		<form id="loginForm">
+		<div>
+			<!-- userName input  -->
+			<input id="userName" type="text" placeholder="userName" name="userName" required>
+			<!-- customerId input  -->
+			<input id="customerId" type="text" placeholder="customerId" name="customerId" required>
+		</div>
+		<p id="errorMessage"></p>
+
+		<input type="button" value="Login" id="loginButton" onclick="validate(this.form)">
+
+	</div>
 	<script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
