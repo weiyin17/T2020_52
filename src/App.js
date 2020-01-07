@@ -4,6 +4,7 @@ import './App.css';
 // Containers/Components
 import LoginContainer from './containers/LoginContainer';
 import HomeContainer from './containers/HomeContainer';
+import BarChart from './containers/BarChart';
 
 //Logic
 import validateLogin from './functions/login';
@@ -31,7 +32,7 @@ class App extends React.Component {
 
   render() {
     if (this.state.customerId) {
-      return <HomeContainer/>;
+      return <BarChart/>;
     }
     else {
       return (

@@ -22,7 +22,7 @@ const API_HEADERS = {
 
 const validateLogin = function(userName, customerId) {
   // console.log("clicking");
-  console.log(userName);
+  // console.log(userName);
   // console.log(form.customerId.value);
   // console.log(document.getElementById('customerId').value);
   let USER_NAME = userName;
@@ -38,7 +38,7 @@ const validateLogin = function(userName, customerId) {
           resolve(true);
         }
         else {
-          resolve(false);
+          reject();
         }
       })
       .catch(error => console.error("On getting user data error", error));
