@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TechTrek Product Matching</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    <!--Load React Components -->
+    <script src="loginForm.js"></script>
+
+  </head>
+
+  <body>
+    <div id="login-form">
+      <h1>LOGIN PAGE</h1>
+      <form id="loginForm">
+        <div>
+          <input id="userName" type="text" placeholder="userName" name="userName" required />
+          <input id="customerId" type="text" placeholder="customerId" name="customerId" required />
+        </div>
+        <p id="errorMessage"></p>
+
+        <input type="button" value="Login" id="loginButton" onclick="validate(this.form)" />
+      </form>
+      <script type="text/javascript" src="scripts.js"></script>
+  </body>
+
+</html>

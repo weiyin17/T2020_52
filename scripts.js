@@ -1,3 +1,12 @@
+var user_customer_id = null;
+// Landing Functionality
+if (user_customer_id) {
+	console.log(user_customer_id);
+	window.location.href = "home.html";
+} else {
+	window.location.replace("login.html");
+}
+
 //Login Functionality
 var loginButton = document.querySelector('#loginButton');
 var errorMessage = document.querySelector('#errorMessage');
@@ -20,6 +29,7 @@ function validate(form) {
 	axios.get(`${API_URL}/customers/${USER_NAME}`, { headers: API_HEADERS })
 	.then(response => {
 		if(response.data.customerId === form.customerId.value) {
+			user_customer_id = response;
 			window.location.href = "home.html";
 		}
 		else {
@@ -27,13 +37,15 @@ function validate(form) {
 		}
 	})
 	.catch(error => console.error("On getting user data error", error));
-	
+
 };
 
 function loginFail() {
 	errorMessage.textContent = "Login failed. Try again.";
 
 }
+
+
 
 
 
