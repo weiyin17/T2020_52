@@ -24,12 +24,6 @@ class LoginContainer extends React.Component {
       return this.setState({ error: 'Customer ID is required' });
     }
     this.props.handleLogin(this.state.username, this.state.customerId);
-
-    // this.props.handleLogin({
-    //   userName: this.state.username,
-    //   customerId: this.state.customerId,
-    // });
-    // return this.setState({ error: '' });
   }
 
   handleUserChange(evt) {
