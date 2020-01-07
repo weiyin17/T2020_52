@@ -1,11 +1,6 @@
 var user_customer_id = null;
 // Landing Functionality
-if (user_customer_id) {
-	console.log(user_customer_id);
-	window.location.href = "home.html";
-} else {
-	window.location.replace("login.html");
-}
+
 
 //Login Functionality
 var loginButton = document.querySelector('#loginButton');
